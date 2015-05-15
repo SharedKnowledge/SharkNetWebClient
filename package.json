@@ -1,0 +1,19 @@
+{
+  "name": "SharkNetWebClient",
+  "version": "0.0.0",
+  "description": " Client for a P2P based social network",
+  "author": "Felix Brix and Paul Kujawa",
+  "license": "ISC",
+
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+
+  "devDependencies": {
+    "coffeelint": "^1.6.0",
+    
+    "grunt": "~0.4.5",
+    "grunt-contrib-coffee": "~0.11.1",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
