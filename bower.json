@@ -1,0 +1,22 @@
+{
+  "name": "SharkNetWebClient",
+  "description": "Client for a P2P based social network",
+  "version": "0.0.0",
+  "authors": [
+    "Felix Brix and Paul Kujawa"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
