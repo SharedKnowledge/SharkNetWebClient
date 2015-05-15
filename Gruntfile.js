@@ -4,13 +4,13 @@ module.exports = function(grunt) {
 
     watch: {
       app: {
-        files: ['src/coffee/*.coffee', 'src/sass/*.scss'],
+        files: ['src/coffee/*.coffee', 'src/sass/*.scss', 'src/*.haml'],
         tasks: ['default']
       }
     },
 
     coffee: {
-      app: {
+      build: {
         expand: true,
         flatten: true,
         cwd: 'src/coffee',
@@ -25,12 +25,22 @@ module.exports = function(grunt) {
         sourcemap: 'none'
       },
 
-      app: {
+      build: {
         expand: true,
         cwd: 'src/sass',
         src: ['*.scss'],
         dest: 'build/css',
         ext: '.css'
+      }
+    },
+
+    haml: {
+      build: {
+        expand: true,
+        cwd: 'src',
+        src: ['*.haml'],
+        dest: 'build',
+        ext: '.html'
       }
     }
   });
@@ -38,7 +48,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-coffeelint');
 
-  grunt.registerTask('default', ['coffee', 'sass']);
+  grunt.registerTask('default', ['coffee', 'sass', 'haml']);
 };
