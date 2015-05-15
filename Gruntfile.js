@@ -4,11 +4,11 @@ module.exports = function(grunt) {
 
     watch: {
       app: {
-        files: ['src/coffee/*.coffee'],
+        files: ['src/coffee/*.coffee', 'src/sass/*.scss'],
         tasks: ['default']
       }
     },
-    
+
     coffee: {
       app: {
         expand: true,
@@ -18,12 +18,27 @@ module.exports = function(grunt) {
         dest: 'build/js',
         ext: '.js'
       }
+    },
+
+    sass: {
+      options: {
+        sourcemap: 'none'
+      },
+
+      app: {
+        expand: true,
+        cwd: 'src/sass',
+        src: ['*.scss'],
+        dest: 'build/css',
+        ext: '.css'
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-coffeelint');
 
-  grunt.registerTask('default', ['coffee']);
+  grunt.registerTask('default', ['coffee', 'sass']);
 };
