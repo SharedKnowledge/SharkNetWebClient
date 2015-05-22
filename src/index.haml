@@ -5,10 +5,21 @@
       SharkNet Web Client
 
     -# Styling components
+    %link{ href: 'css/fonts.css', rel: 'stylesheet' }
     %link{ href: 'css/base.css', rel: 'stylesheet' }
 
     -# Script libraries
     %script{ src: 'js/libs.js' }
 
+    -# Application partials
+    %script{ src: 'js/partials/header.js' }
+
+    -# Application script
+    %script{ src: 'js/application.js' }
+
 
   %body
+    %header#header.header
+
+    :coffeescript
+      application = new Application

@@ -4,19 +4,32 @@ module.exports = function(grunt) {
 
     watch: {
       app: {
-        files: ['src/coffee/*.coffee', 'src/sass/*.scss', 'src/*.haml'],
+        files: ['src/**/*.coffee', 'src/**/*.scss', 'src/*.haml'],
         tasks: ['build']
       }
     },
 
     coffee: {
       build: {
-        expand: true,
-        flatten: true,
-        cwd: 'src/coffee',
-        src: ['*.coffee'],
-        dest: 'build/js',
-        ext: '.js'
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            cwd: 'src/coffee/partials',
+            src: ['*.coffee'],
+            dest: 'build/js/partials',
+            ext: '.js'
+          },
+
+          {
+            expand: true,
+            flatten: true,
+            cwd: 'src/coffee',
+            src: ['*.coffee'],
+            dest: 'build/js',
+            ext: '.js'
+          }
+        ]
       }
     },
 
