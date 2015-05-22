@@ -46,6 +46,14 @@ module.exports = function(grunt) {
             src: ['*.scss'],
             dest: 'build/css/shared',
             ext: '.css'
+          },
+
+          {
+            expand: true,
+            cwd: 'src/sass/partials',
+            src: ['*.scss'],
+            dest: 'build/css/partials',
+            ext: '.css'
           }
         ]
       }
