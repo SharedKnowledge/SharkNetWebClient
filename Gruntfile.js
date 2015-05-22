@@ -39,11 +39,15 @@ module.exports = function(grunt) {
       },
 
       build: {
-        expand: true,
-        cwd: 'src/sass',
-        src: ['*.scss'],
-        dest: 'build/css',
-        ext: '.css'
+        files: [
+          {
+            expand: true,
+            cwd: 'src/sass/shared',
+            src: ['*.scss'],
+            dest: 'build/css/shared',
+            ext: '.css'
+          }
+        ]
       }
     },
 
