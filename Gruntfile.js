@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     watch: {
       app: {
         files: ['src/coffee/*.coffee', 'src/sass/*.scss', 'src/*.haml'],
-        tasks: ['default']
+        tasks: ['build']
       }
     },
 
@@ -42,14 +42,26 @@ module.exports = function(grunt) {
         dest: 'build',
         ext: '.html'
       }
-    }
+    },
+
+    concat: {
+      options: { separator: ';' },
+      build: {
+        src: [
+          'bower_components/jquery/dist/jquery.min.js'
+        ],
+
+        dest: 'build/js/libs.js'
+      },
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-haml');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-coffeelint');
 
-  grunt.registerTask('default', ['coffee', 'sass', 'haml']);
+  grunt.registerTask('build', ['coffee', 'sass', 'haml', 'concat']);
 };
