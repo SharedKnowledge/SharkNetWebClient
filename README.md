@@ -7,4 +7,6 @@ $ npm install
 $ bower install
 ```
 
+Run `grunt build` to initially build the project.
+
 Run `grunt watch` to autocompile code when developing.
