@@ -8,6 +8,8 @@ class @PageElement
     root.setAttribute 'class', name
     root
 
-  render: (name, template) ->
+  render: (name, template, callback) ->
     @createRoot name unless $("##{name}").length
     $("##{name}").load template
+
+    callback()
