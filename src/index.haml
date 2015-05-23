@@ -14,6 +14,7 @@
     %script{ src: 'js/libs.js' }
 
     -# Application partials
+    %script{ src: 'js/partials/page-element.js' }
     %script{ src: 'js/partials/header.js' }
 
     -# Application script
@@ -21,7 +22,5 @@
 
 
   %body
-    %header#header.header
-
     :coffeescript
-      application = new Application
+      new Application

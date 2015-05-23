@@ -1,8 +1,3 @@
-class @Header
+class @Header extends @PageElement
   constructor: (element) ->
-    @header = $ element
-
-    @render()
-
-  render: ->
-    @header.html '<div>test</div>'
+    @render 'header', 'html/partials/header.html'
