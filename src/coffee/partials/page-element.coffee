@@ -1,5 +1,5 @@
 class @PageElement
-  createRoot: (name) =>
+  createRoot: (name) ->
     $('body').append @root(name)
 
   root: (name) ->
