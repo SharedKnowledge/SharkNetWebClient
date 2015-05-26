@@ -10,6 +10,4 @@ class @PageElement
 
   render: (name, template, callback) ->
     @createRoot name unless $("##{name}").length
-    $("##{name}").load template
-
-    callback()
+    $("##{name}").load template, callback
