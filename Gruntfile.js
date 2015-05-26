@@ -15,6 +15,15 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
+            cwd: 'src/coffee/components',
+            src: ['*.coffee'],
+            dest: 'build/js/components',
+            ext: '.js'
+          },
+
+          {
+            expand: true,
+            flatten: true,
             cwd: 'src/coffee/partials',
             src: ['*.coffee'],
             dest: 'build/js/partials',
