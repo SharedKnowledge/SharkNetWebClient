@@ -15,6 +15,33 @@ module.exports = function(grunt) {
           {
             expand: true,
             flatten: true,
+            cwd: 'src/coffee/api',
+            src: ['*.coffee'],
+            dest: 'build/js/api',
+            ext: '.js'
+          },
+
+          {
+            expand: true,
+            flatten: true,
+            cwd: 'src/coffee/api/routing',
+            src: ['*.coffee'],
+            dest: 'build/js/api/routing',
+            ext: '.js'
+          },
+
+          {
+            expand: true,
+            flatten: true,
+            cwd: 'src/coffee/api/endpoints',
+            src: ['*.coffee'],
+            dest: 'build/js/api/endpoints',
+            ext: '.js'
+          },
+
+          {
+            expand: true,
+            flatten: true,
             cwd: 'src/coffee/components',
             src: ['*.coffee'],
             dest: 'build/js/components',

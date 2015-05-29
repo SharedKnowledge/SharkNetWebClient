@@ -1,5 +1,6 @@
 class @Partial extends @PageElement
   constructor: (elementName) ->
+    super
     @render elementName, @partialUrl(elementName), @initialize(elementName)
 
   initialize: (elementName) ->

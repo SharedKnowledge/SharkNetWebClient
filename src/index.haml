@@ -17,6 +17,19 @@
     -# Script libraries
     %script{ src: 'js/libs.js' }
 
+    -# API | Routing
+    %script{ src: 'js/api/routing/routes.js' }
+    %script{ src: 'js/api/routing/profile-routes.js' }
+
+    -# API | Endpoints
+    %script{ src: 'js/api/endpoints/profiles.js' }
+
+    -# API | Script
+    %script{ src: 'js/api/api.js' }
+
+    -# Application script
+    %script{ src: 'js/application.js' }
+
     -# Application components
     %script{ src: 'js/components/page-element.js' }
     %script{ src: 'js/components/partial.js' }
@@ -24,10 +37,6 @@
     -# Application partials
     %script{ src: 'js/partials/header.js' }
 
-    -# Application script
-    %script{ src: 'js/application.js' }
-
-
   %body
     :coffeescript
-      new Application
+      new Header 'header'

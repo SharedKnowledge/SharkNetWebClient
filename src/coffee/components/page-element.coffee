@@ -1,4 +1,4 @@
-class @PageElement
+class @PageElement extends @Application
   createRoot: (name) ->
     $('body').append @root(name)
 
