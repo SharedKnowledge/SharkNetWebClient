@@ -1,4 +1,4 @@
-class @Profiles extends @ProfileRoutes
+class @Peers extends @PeerRoutes
   get: ->
     $.ajax
       url: @getUrl()

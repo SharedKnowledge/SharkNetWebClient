@@ -1,3 +1,3 @@
 class @API
   constructor: ->
-    @profiles = new Profiles
+    @peers = new Peers
