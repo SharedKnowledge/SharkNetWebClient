@@ -39,4 +39,5 @@
 
   %body
     :coffeescript
-      new Header 'header'
+      @SharkNetWebClient = new Application
+      @SharkNetWebClient.build()
