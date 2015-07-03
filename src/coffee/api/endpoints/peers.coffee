@@ -6,3 +6,12 @@ class @Peers extends @PeerRoutes
 
       success: (data) ->
         console.log data
+
+  post: (data) ->
+    $.ajax
+      url: @postUrl()
+      data: data
+      type: 'POST'
+
+      success: (data) ->
+        console.log data
