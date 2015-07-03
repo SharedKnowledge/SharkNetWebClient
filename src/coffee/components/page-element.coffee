@@ -1,6 +1,6 @@
 class @PageElement extends @Application
   createRoot: (name) ->
-    $('body').append @root(name)
+    @applicationBody.append @root(name)
 
   root: (name) ->
     root = document.createElement 'div'

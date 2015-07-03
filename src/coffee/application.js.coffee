@@ -1,5 +1,6 @@
 class @Application
   constructor: ->
+    @applicationBody = $ 'body'
     @api = new API
 
   build: ->
