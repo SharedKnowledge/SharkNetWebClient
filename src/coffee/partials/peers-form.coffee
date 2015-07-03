@@ -1,10 +1,11 @@
 class @PeersForm extends @Partial
   initialize: (elementName) ->
-    @peersForm  = $ "##{elementName}"
-    @formTag    = @peersForm.find 'form'
-
-    @bindEvents()
-
-  bindEvents: ->
-    @applicationBody.on 'submit', @formTag, (event) ->
+    @applicationBody.on 'submit', '.peers-form form', (event) =>
       event.preventDefault()
+
+      @api.peers.post @extractedParameters()
+
+  extractedParameters: ->
+    name:      @applicationBody.find('.peers-form').find('input[name=name]').     val(),
+    si:        @applicationBody.find('.peers-form').find('input[name=si]').       val(),
+    addresses: @applicationBody.find('.peers-form').find('input[name=addresses]').val()
