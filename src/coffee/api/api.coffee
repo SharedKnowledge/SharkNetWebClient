@@ -1,3 +1,3 @@
 class @API
-  constructor: ->
-    @peers = new Peers
+  constructor: (@application) ->
+    @peers = new Peers @application

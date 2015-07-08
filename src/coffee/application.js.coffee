@@ -1,8 +1,8 @@
 class @Application
   constructor: ->
-    @applicationBody = $ 'body'
-    @api = new API
+    @api = new API this
 
   build: ->
-    @header    = new Header    'header'
-    @peersForm = new PeersForm 'peers-form'
+    @messages  = new Messages  this, 'messages'
+    @header    = new Header    this, 'header'
+    @peersForm = new PeersForm this, 'peers-form'

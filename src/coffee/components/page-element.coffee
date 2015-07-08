@@ -1,4 +1,7 @@
-class @PageElement extends @Application
+class @PageElement
+  constructor: ->
+    @applicationBody = $ 'body'
+
   createRoot: (name) ->
     @applicationBody.append @root(name)
 
