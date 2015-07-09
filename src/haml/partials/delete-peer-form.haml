@@ -1,0 +1,8 @@
+.page-element
+  %h2
+    Delete a peer
+
+  %form{ method: 'delete', action: 'http://localhost:8080/SharkNetAPI/peers' }
+    %input{ type: 'text', name: 'si', placeholder: 'SI' }
+    
+    %input{ type: 'submit' }

@@ -3,6 +3,7 @@ class @Application
     @api = new API this
 
   build: ->
-    @messages  = new Messages  this, 'messages'
-    @header    = new Header    this, 'header'
-    @peersForm = new PeersForm this, 'peers-form'
+    @messages       = new Messages       this, 'messages'
+    @header         = new Header         this, 'header'
+    @peersForm      = new PeersForm      this, 'peers-form'
+    @deletePeerForm = new DeletePeerForm this, 'delete-peer-form'

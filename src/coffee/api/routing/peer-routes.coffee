@@ -4,3 +4,6 @@ class @PeerRoutes extends @Routes
 
   postUrl: ->
     "#{@baseUrl()}/peers"
+
+  deleteUrl: ->
+    "#{@baseUrl()}/peers"

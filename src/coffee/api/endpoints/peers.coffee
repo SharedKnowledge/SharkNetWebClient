@@ -16,3 +16,13 @@ class @Peers extends @PeerRoutes
 
       success: (data) ->
         callback @application, data
+
+  delete: (data, callback) ->
+    $.ajax
+      application: @application
+      url: @deleteUrl()
+      data: data
+      type: 'DELETE'
+
+      success: (data) ->
+        callback @application, data
