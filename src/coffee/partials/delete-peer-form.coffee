@@ -7,7 +7,7 @@ class @DeletePeerForm extends @Partial
         @updateForm
 
   updateForm: (application, data) ->
-    application.messages.show "Deleted peer '#{data.si}'."
+    application.messages.show "Deleted peer."
 
   extractedParameters: ->
     si: @applicationBody.find('.delete-peer-form').find('input[name=si]').val()

@@ -20,7 +20,8 @@ class @Peers extends @PeerRoutes
   delete: (data, callback) ->
     $.ajax
       application: @application
-      url: "#{@deleteUrl()}?si=#{data.si}"
+      url: @deleteUrl()
+      data: data
       type: 'DELETE'
 
       success: (data) ->
