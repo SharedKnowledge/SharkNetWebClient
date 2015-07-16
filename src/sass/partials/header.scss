@@ -1,3 +1,9 @@
+@import '../shared/variables';
+
 .header {
   height: 50px;
+
+  h1 {
+    color: $green;
+  }
 }

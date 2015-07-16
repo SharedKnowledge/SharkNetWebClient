@@ -4,6 +4,12 @@ html {
   font-family: $fontBasic;
 
   body {
-    margin: 0;
+    margin: 0 300px;
+  }
+
+  h2 {
+    padding: 5px 0;
+    font-size: $fontSizeBasic;
+    border-bottom: 1px dotted $greyLight;
   }
 }
