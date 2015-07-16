@@ -1,0 +1,10 @@
+@import '../shared/variables';
+
+.messages {
+  .message {
+    padding: 10px;
+    background-color: $greenLight;
+    
+    border-radius: 0 0 5px 5px;
+  }
+}
