@@ -7,8 +7,7 @@ class @PeersForm extends @Partial
         @updateForm
 
   updateForm: (application, data) ->
-    $.each data, (index, object) ->
-      application.messages.show "Added peer '#{object.name}' with SI #{object.SI.join(', ')} and address(es) #{object.addresses.join(', ')}."
+    application.messages.show "Added peer '#{data.name}' with SI #{data.SI.join(', ')} and address(es) #{data.addresses.join(', ')}."
 
   extractedParameters: ->
     name:      @applicationBody.find('.peers-form').find('input[name=name]').     val(),
